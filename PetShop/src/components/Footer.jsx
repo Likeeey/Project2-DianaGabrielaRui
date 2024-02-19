@@ -1,5 +1,5 @@
-import linkedin from "../assets/images/";
-import github from "../assets/images/";
+import github from "../images/github.png"
+import linkedin from "../images/linkedin.png"
 function Footer() {
   return (
     <footer>
@@ -18,7 +18,7 @@ function Footer() {
       </div>
       <div className="secondLine">
         <img src={github} alt="github icon" />
-        <a href="https://github.com/dianasdramos/recipe-book-react-app">
+        <a href="https://github.com/Likeeey/Project2-DianaGabrielaRui/tree/master">
           
           Repository - 2024
         </a>
