@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from "axios";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function AddPet (props) {
 
@@ -17,31 +18,19 @@ function AddPet (props) {
 
         e.preventDefault();
 
-        const newPet = {id, name, species, breed, age, picture}
-        props.newPets(newPet);
+        const newPet = {name, species, breed, age, picture}
 
-        
+        axios.post(API_URL, newPet)
+        .then((response)=> props.addPet(response.data))
+        .catch((error)=> console.log(error));
+
+
         setName("");
         setSpecies("");
         setBreed("");
         setAge(0);
         setPicture(null);
     }
-
-    function handleImageChange(e) {
-        const file = e.target.files[0];
-        setPicture(URL.createObjectURL(file));
-      }
-
-      
-     useEffect(()=>{
-        if (props.newPets) {
-
-        
-        axios.post(`${API_URL}/`, props.newPet)
-        .then((response)=> props.addPet(response.data))
-        .catch((error)=> console.log(error));}
-    }, [props.newPets])
 
     return (
         <section>
@@ -65,7 +54,7 @@ function AddPet (props) {
                 <label>
                     Picture
                 </label>
-                <input type="file" accept="image/*" onChange={(handleImageChange)}/>
+                <input type="text" name="picture" value={picture} onChange={(e) => setPicture(e.target.value)}/>
 
                 <button type="submit">Add Pet</button>
             </form>
