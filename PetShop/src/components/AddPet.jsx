@@ -9,7 +9,7 @@ function AddPet (props) {
     const [species, setSpecies] = useState("");
     const [breed, setBreed] = useState("");
     const [age, setAge] = useState(0);
-    const [picture, setPicture] = useState(null);
+    const [picture, setPicture] = useState("");
 
     const API_URL = "http://localhost:3000/pets";
 
@@ -29,7 +29,7 @@ function AddPet (props) {
         setSpecies("");
         setBreed("");
         setAge(0);
-        setPicture(null);
+        setPicture("");
     }
 
     return (

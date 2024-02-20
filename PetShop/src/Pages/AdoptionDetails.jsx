@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import axios from "axios";
 import {Link} from 'react-router-dom';
 import Adoption from "./Adoption";
+import EditPet from "../components/EditPet";
 
 
 const API_URL = "http://localhost:3000/pets";
@@ -20,6 +21,9 @@ function AdoptionDetails() {
     
     return (
         <section>
+            <div>
+                <EditPet id={id}/>
+            </div>
              <div key={adoption.id}>
                   <h4>{adoption.name}</h4>
                   <h4>{adoption.species}</h4>

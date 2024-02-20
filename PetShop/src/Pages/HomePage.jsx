@@ -1,9 +1,16 @@
-function HomePage () {
-    return (
-       <div>
+import Carousel from "../components/Carousel";
 
-       </div>
-    )
+function HomePage() {
+
+  return (
+    <section>
+     
+      <section className="container">
+        <Carousel/>
+      </section>
+   
+    </section>
+  );
 }
 
 export default HomePage;
