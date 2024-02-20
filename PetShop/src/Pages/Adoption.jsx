@@ -3,6 +3,7 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import AdoptionDetails from "./AdoptionDetails";
 import Addpet from "../components/AddPet"
+import { v4 as uuidv4 } from 'uuid';
 
 
 const API_URL = "http://localhost:3000/pets";
@@ -17,13 +18,20 @@ function Adoption (){
         .catch((error)=> console.log(error));
     }, [])
     
-    const [pet, setPet] = useState(API_URL);
     
     
     function newPets(newPet) {
-        
-        setPet((pets) => [...pets, newPet]);
+      const uniqueId = uuidv4(); // Generate a unique id for the new pet
+      const newAdoption = { ...newPet, id: uniqueId }; // Create a new object with the unique id
 
+      setAdoptions((pets) => [...pets, newAdoption])
+      axios.post(`${API_URL}/`, newAdoption)
+      .then((response) => {
+        setAdoptions(response.data)
+      })
+      .catch((error) => {
+        console.log(error);
+      })
     }
     
 

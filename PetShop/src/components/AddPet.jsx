@@ -1,20 +1,26 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import axios from "axios";
 
 function AddPet (props) {
 
+    const [id, setId] = useState(0)
     const [name, setName] = useState("");
     const [species, setSpecies] = useState("");
     const [breed, setBreed] = useState("");
     const [age, setAge] = useState(0);
     const [picture, setPicture] = useState(null);
 
+    const API_URL = "http://localhost:3000/pets";
+
+
     function handleSubmit(e) {
 
         e.preventDefault();
 
-        const newPet = {name, species, breed, age, picture}
+        const newPet = {id, name, species, breed, age, picture}
         props.newPets(newPet);
 
+        
         setName("");
         setSpecies("");
         setBreed("");
@@ -26,6 +32,16 @@ function AddPet (props) {
         const file = e.target.files[0];
         setPicture(URL.createObjectURL(file));
       }
+
+      
+     useEffect(()=>{
+        if (props.newPets) {
+
+        
+        axios.post(`${API_URL}/`, props.newPet)
+        .then((response)=> props.addPet(response.data))
+        .catch((error)=> console.log(error));}
+    }, [props.newPets])
 
     return (
         <section>
