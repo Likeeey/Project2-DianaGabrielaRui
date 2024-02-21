@@ -1,5 +1,6 @@
-import axios from "axios";
+/*import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 
 const API_URL = "http://localhost:3000/pets";
@@ -12,8 +13,8 @@ function Delete(props) {
     function handleDelete () {
         
         axios.delete(`${API_URL}/${id}`)
-        .then((response) => {
-          navigate("/adoption")
+        .then(() => {
+            navigate("/adoption")
         })
         .catch((error) => console.log(error));
     };
@@ -22,4 +23,4 @@ function Delete(props) {
     )
 }
 
-export default Delete;
+export default Delete;*/

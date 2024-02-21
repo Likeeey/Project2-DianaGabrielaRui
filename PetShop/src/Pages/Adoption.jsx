@@ -3,31 +3,28 @@ import axios from 'axios';
 import {Link, useNavigate} from 'react-router-dom';
 import AdoptionDetails from "./AdoptionDetails";
 import Addpet from "../components/AddPet"
-import Delete from "../components/Delete"
-
-
 
 const API_URL = "http://localhost:3000/pets";
 
 
 function Adoption (){
-
+    const [petCreated, setPetCreated] = useState(false);
     const [adoptions, setAdoptions] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(()=>{
         axios.get(`${API_URL}`)
+        
         .then((response)=> setAdoptions(response.data))
         .catch((error)=> console.log(error));
-    }, [])
+    }, [petCreated]);
     
     function newPets(newPet) {
-      const newAdoption = { ...newPet, newPet }; // Create a new object with the unique id
 
-      setAdoptions((pets) => [...pets, newAdoption])
-      axios.post(`${API_URL}`, newAdoption)
+      axios.post(`${API_URL}`, newPet)
       .then((response) => {
-        setAdoptions(response.data)
-
+        setPetCreated(true);
+        setPetDelete(true);
       })
       .catch((error) => {
         console.log(error);
@@ -51,9 +48,6 @@ function Adoption (){
                   <h4>{adoption.breed}</h4>
                   <h4>{adoption.age}</h4>
                   <img src={adoption.picture}/>
-                  <div>
-                      <Delete id={adoption.id}/>
-                  </div>
               </div>
             );
           })}

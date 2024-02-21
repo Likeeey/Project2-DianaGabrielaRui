@@ -19,7 +19,7 @@ function EditPet (props) {
         const data = {name, species, breed, age, description, picture};
         
         useEffect(() => {
-        axios.put(`${API_URL}/${id}`, data)
+        axios.get(`${API_URL}/${id}`, data)
         .then((response) => {
             setName(response.data.name);
             setSpecies(response.data.species);
@@ -45,9 +45,17 @@ function EditPet (props) {
         .catch((error) => {
             console.log(error);
         })
+};
 
-    
-}
+    function deletePet () {
+        axios.delete(`${API_URL}/${id}`)
+        .then(() => {
+        navigate("/adoption");
+    })
+        .catch((error) =>
+        console.log(error)
+    )}
+
 
     return (
         <section>
@@ -79,6 +87,8 @@ function EditPet (props) {
 
                 <button type="submit">Save Pet</button>
             </form>
+
+            <button onClick={deletePet}>Delete</button>
         </section>
     )
 }

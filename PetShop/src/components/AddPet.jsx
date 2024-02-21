@@ -20,10 +20,7 @@ function AddPet (props) {
 
         const newPet = {name, species, breed, age, picture}
 
-        axios.post(API_URL, newPet)
-        .then((response)=> props.addPet(response.data))
-        .catch((error)=> console.log(error));
-
+       props.newPets(newPet)
 
         setName("");
         setSpecies("");

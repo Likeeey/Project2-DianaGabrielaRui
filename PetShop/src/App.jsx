@@ -9,7 +9,6 @@ import Navbar from './components/NavBar'
 import Footer from './components/Footer'
 import AddPet from "./components/AddPet"
 import EditPet from './components/EditPet'
-import Delete from './components/Delete'
 
 function App() {
 
