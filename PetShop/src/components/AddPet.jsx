@@ -11,7 +11,7 @@ function AddPet (props) {
     const [age, setAge] = useState(0);
     const [picture, setPicture] = useState("");
 
-    const API_URL = "http://localhost:3000/pets";
+    const API_URL = "https://backend-server-awt7.onrender.com/";
 
 
     function handleSubmit(e) {

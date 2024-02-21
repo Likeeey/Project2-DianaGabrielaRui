@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 
-const API_URL = "http://localhost:3000/pets";
+const API_URL = "https://backend-server-awt7.onrender.com/";
 
 function Delete(props) {
 
