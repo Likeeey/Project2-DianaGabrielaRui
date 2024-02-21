@@ -4,7 +4,8 @@ import axios from "axios";
 import {Link} from 'react-router-dom';
 import Adoption from "./Adoption";
 import EditPet from "../components/EditPet";
-
+import Popup from "reactjs-popup";
+import 'reactjs-popup/dist/index.css'
 
 const API_URL = "http://localhost:3000/pets";
 
@@ -37,6 +38,13 @@ function AdoptionDetails() {
                     <button>Back</button>
                 </Link>
               </div>
+              <div>
+                <Popup trigger={<button>Adopt</button>}
+                    position="right center">
+                <div>For more information contact us via email:</div>
+                <p>adoptpets825@gmail.com</p>
+                </Popup>
+                </div>
         </section>
     )
 
