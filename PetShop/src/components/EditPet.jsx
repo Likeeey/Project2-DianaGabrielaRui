@@ -47,14 +47,14 @@ function EditPet (props) {
         })
 };
 
-    function deletePet () {
+    /*function deletePet () {
         axios.delete(`${API_URL}/${id}`)
         .then(() => {
         navigate("/adoption");
     })
         .catch((error) =>
         console.log(error)
-    )}
+    )}*/
 
 
     return (
@@ -88,7 +88,7 @@ function EditPet (props) {
                 <button type="submit">Save Pet</button>
             </form>
 
-            <button onClick={deletePet}>Delete</button>
+            {/*<button onClick={deletePet}>Delete</button>*/}
         </section>
     )
 }

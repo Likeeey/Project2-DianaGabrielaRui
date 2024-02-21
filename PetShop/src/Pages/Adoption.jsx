@@ -3,14 +3,15 @@ import axios from 'axios';
 import {Link, useNavigate} from 'react-router-dom';
 import AdoptionDetails from "./AdoptionDetails";
 import Addpet from "../components/AddPet"
+import Delete from "../components/Delete";
 
 const API_URL = "http://localhost:3000/pets";
+
 
 
 function Adoption (){
     const [petCreated, setPetCreated] = useState(false);
     const [adoptions, setAdoptions] = useState([]);
-    const navigate = useNavigate();
 
     useEffect(()=>{
         axios.get(`${API_URL}`)
@@ -22,9 +23,8 @@ function Adoption (){
     function newPets(newPet) {
 
       axios.post(`${API_URL}`, newPet)
-      .then((response) => {
-        setPetCreated(true);
-        setPetDelete(true);
+      .then(() => {
+        setPetCreated((prev)=> !prev); // É o switch criado para ele mudar de State de false para true
       })
       .catch((error) => {
         console.log(error);
@@ -48,9 +48,11 @@ function Adoption (){
                   <h4>{adoption.breed}</h4>
                   <h4>{adoption.age}</h4>
                   <img src={adoption.picture}/>
+                  <Delete id={adoption.id} setPetCreated={setPetCreated}/>
               </div>
             );
           })}
+          
       </div>
     );
 }
