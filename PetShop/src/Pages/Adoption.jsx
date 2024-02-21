@@ -5,7 +5,7 @@ import AdoptionDetails from "./AdoptionDetails";
 import Addpet from "../components/AddPet"
 import Delete from "../components/Delete";
 
-const API_URL = "https://backend-server-awt7.onrender.com";
+const API_URL = "http://localhost:3000/pets";
 
 
 
