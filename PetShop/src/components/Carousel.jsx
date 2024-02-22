@@ -4,7 +4,7 @@ import axios from "axios";
 import left from "../assets/images/left-arrow.png"
 import right from "../assets/images/right-arrow.png"
 
-const API_URL = "http://localhost:3000/pets";
+const API_URL = "https://backend-server-awt7.onrender.com/pets";
 
 function Carousel() {
   const [card, setCard] = useState(0);

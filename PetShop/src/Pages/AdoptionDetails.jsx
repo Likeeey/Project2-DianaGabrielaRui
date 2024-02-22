@@ -7,7 +7,7 @@ import EditPet from "../components/EditPet";
 import Popup from "reactjs-popup";
 import 'reactjs-popup/dist/index.css'
 
-const API_URL = "http://localhost:3000/pets";
+const API_URL = "https://backend-server-awt7.onrender.com/pets";
 
 
 function AdoptionDetails() {
