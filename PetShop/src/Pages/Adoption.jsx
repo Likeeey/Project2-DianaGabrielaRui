@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Addpet from "../components/AddPet";
-const API_URL = "http://localhost:3000/pets";
+
+
+const API_URL = "https://backend-server-awt7.onrender.com/pets";
+
+
 function Adoption() {
   const [adoptions, setAdoptions] = useState([]);
   useEffect(() => {

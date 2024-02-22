@@ -8,7 +8,11 @@ function AddPet (props) {
     const [breed, setBreed] = useState("");
     const [age, setAge] = useState(0);
     const [picture, setPicture] = useState(null);
-    const API_URL = "http://localhost:3000/pets";
+    
+    
+    const API_URL = "https://backend-server-awt7.onrender.com/pets";
+    
+    
     function handleSubmit(e) {
         e.preventDefault();
         const newPet = {name, species, breed, age, picture}

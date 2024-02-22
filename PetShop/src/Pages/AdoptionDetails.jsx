@@ -24,48 +24,58 @@ function AdoptionDetails() {
     }, [])
     
     return (
-        <section>
-            <div>
-                <EditPet id={id}/>
-            </div>
-             <div key={adoption.id}>
-                  <h4>{adoption.name}</h4>
-                  <h4>{adoption.species}</h4>
-                  <h4>{adoption.breed}</h4>
-                  <h4>{adoption.age}</h4>
-                  <h4>{adoption.description}</h4>
-                  <img src={adoption.picture}/>
-              </div>
-              <div>
+        <section id="adoption-details">
+            <div id="details-edit-form"key={adoption.id}>
+                <div>
+                  <h4 id="details-name">{adoption.name}</h4>
+                </div>
+                <div>
+                    <img id="details-picture"src={adoption.picture}/>
+                </div>
+                    <div id="details-info">
+                        <h4 className="details-info">Species: {adoption.species}</h4>
+                        <h4 className="details-info">Breed: {adoption.breed}</h4>
+                        <h4 className="details-info">Age: {adoption.age}</h4>
+                    </div>
+                    <div id="details-description">
+                        <h4>{adoption.description}</h4>
+                    </div>
+                </div>
+              <div id="popup">
                 <Popup trigger={<button>Adopt</button>}
                     position="right center">
                 <div>For more information contact us via email:</div>
                 <p>adoptpets825@gmail.com</p>
                 </Popup>
                 </div>
-                <div>
-                    <FacebookShareButton
-                        url={`https://backend-server-awt7.onrender.com/pets/adoptiondetails/${id}`}
-                        hashtag="#AdoptPets">
-                        <FacebookIcon size={32} round />
-                    </FacebookShareButton>
+                <div id="share-buttons">
+                    <div id="facebook-share">
+                        <FacebookShareButton
+                            url={`https://backend-server-awt7.onrender.com/pets/adoptiondetails/${id}`}
+                            hashtag="#AdoptPets">
+                            <FacebookIcon size={30} round />
+                        </FacebookShareButton>
+                    </div>
+                    <div id="twitter-share">
+                        <TwitterShareButton
+                            url={`https://backend-server-awt7.onrender.com/pets/adoptiondetails/${id}`}
+                            title={'He needs a new home!'}
+                            hashtags={["AdoptPets"]}>
+                            <TwitterIcon size={30} round />
+                        </TwitterShareButton>
+                    </div>
+                    <div id="whatsapp-share">
+                        <WhatsappShareButton
+                            url={`https://backend-server-awt7.onrender.com/pets/adoptiondetails/${id}`}
+                            title={'He needs a new home!'}>
+                            <WhatsappIcon size={30} round />
+                        </WhatsappShareButton>
+                    </div>
                 </div>
-                <div>
-                    <TwitterShareButton
-                        url={`https://backend-server-awt7.onrender.com/pets/adoptiondetails/${id}`}
-                        title={'He needs a new home!'}
-                        hashtags={["#AdoptPets"]}>
-                        <TwitterIcon size={32} round />
-                    </TwitterShareButton>
+                <div id="details-edit">
+                    <EditPet id={id}/>
                 </div>
-                <div>
-                    <WhatsappShareButton
-                        url={`https://backend-server-awt7.onrender.com/pets/adoptiondetails/${id}`}
-                        title={'He needs a new home!'}>
-                        <WhatsappIcon size={32} round />
-                    </WhatsappShareButton>
-                </div>
-                <div>
+                <div id="details-back-button">
                 <Link to={`/adoption`}>
                     <button>Back</button>
                 </Link>

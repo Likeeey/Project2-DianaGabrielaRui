@@ -159,3 +159,71 @@ input {
 #labelPicture {
   margin-right: 8px;
 }
+
+#adoption-details {
+  width: 100%;
+  background-color: #E3D6C4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#details-name {
+  font-size: 40px;
+  color: #2D3648;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#details-picture {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 500px;
+  width: auto;
+}
+#animal-info {
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+#details-info {
+  width: 100%;
+  display: flex;
+}
+.details-info {
+  width: 100%;
+  font-size: 17px;
+  color: #2D3648;
+  display: flex;
+  justify-content: center;
+}
+#details-description {
+  font-size: 20px;
+  color: #2D3648;
+  display: flex;
+  display: inline-block;
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+}
+#popup {
+  color: #2D3648;
+}
+#share-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#facebook-share {
+  margin: 15px 5px;
+}
+#twitter-share {
+  margin: 15px 5px;
+}
+#whatsapp-share {
+  margin: 15px 5px;
+}
+#details-back-button {
+  margin: 30px;
+}
