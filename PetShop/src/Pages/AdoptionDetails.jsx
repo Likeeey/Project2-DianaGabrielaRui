@@ -50,15 +50,14 @@ function AdoptionDetails() {
                 </div>
                 <div>
                     <FacebookShareButton
-                        url={`http://localhost:3000/pets/adoptiondetails/${id}`}
-                        quote={'He needs a new home!'}
+                        url={`https://backend-server-awt7.onrender.com/pets/adoptiondetails/${id}`}
                         hashtag="#AdoptPets">
                         <FacebookIcon size={32} round />
                     </FacebookShareButton>
                 </div>
                 <div>
                     <TwitterShareButton
-                        url={`http://localhost:3000/pets/adoptiondetails/${id}`}
+                        url={`https://backend-server-awt7.onrender.com/pets/adoptiondetails/${id}`}
                         title={'He needs a new home!'}
                         hashtags={["#AdoptPets"]}>
                         <TwitterIcon size={32} round />
@@ -66,7 +65,7 @@ function AdoptionDetails() {
                 </div>
                 <div>
                     <WhatsappShareButton
-                        url={`http://localhost:3000/pets/adoptiondetails/${id}`}
+                        url={`https://backend-server-awt7.onrender.com/pets/adoptiondetails/${id}`}
                         title={'He needs a new home!'}>
                         <WhatsappIcon size={32} round />
                     </WhatsappShareButton>

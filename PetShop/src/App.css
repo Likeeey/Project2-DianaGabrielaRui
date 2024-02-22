@@ -1,8 +1,15 @@
+@font-face {
+  font-family: Cute Animal;
+  src: url(sansation_light.woff);
+}
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: Acari Sans Neue, Cute Animal, 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
 }
 
 .logo {
