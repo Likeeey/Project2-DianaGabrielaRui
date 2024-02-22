@@ -51,7 +51,7 @@ function Carousel() {
             <div className="card">
               <div id="Picture">
                 <img src={carouselData[card].picture} alt={carouselData[card].name} />
-  </div>
+      </div>
               <div>
                 <h3>{carouselData[card].name}</h3>
                 <p>{carouselData[card].breed}</p>

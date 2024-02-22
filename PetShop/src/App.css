@@ -5,13 +5,18 @@
   src: local('Cute Animal') url('https://fonts.cdnfonts.com/css/cute-animal');
 } */
 
+body {
+  margin: 0;
+  background-color: #E3D6C4;
+}
+
 input {
   height: 24px;
   width: auto;
 }
 
 #root {
-  max-width: 100px;
+
   margin: 0;
   padding: 0;
   text-align: center;
