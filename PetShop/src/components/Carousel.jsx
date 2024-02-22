@@ -58,7 +58,7 @@ function Carousel() {
               </div>
               <div className="bigCardButtons">
                 <Link id="goAdoptionDetailsBtn" to={`/adoptionDetails/${carouselData[card].id} ` } state={carouselData[card]}>
-                  <button>Go to your pet</button>
+                  <button className="standardButton">Go to {carouselData[card].name}</button>
                 </Link>
               </div>
             </div>
@@ -76,7 +76,7 @@ function Carousel() {
               </div>
               <div className="bigCardButtons">
                 <Link id="goAdoptionDetailsBtn" to={`/adoptionDetails/${carouselData[card  + 1].id}` } state={carouselData[card]}>
-                  <button>Go to your pet</button>
+                  <button className="standardButton">Go to {carouselData[card + 1].name}</button>
                 </Link>
               </div>
             </div>

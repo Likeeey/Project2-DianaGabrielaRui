@@ -6,8 +6,11 @@
 } */
 
 body {
+  display: block;
   margin: 0;
   background-color: #E3D6C4;
+  padding: 0;
+  height: 100%
 }
 
 input {
@@ -20,6 +23,7 @@ input {
   margin: 0;
   padding: 0;
   text-align: center;
+  height: 100%;
   
 }
 
@@ -72,8 +76,7 @@ input {
   justify-content: space-evenly;
   background-color: #CD8C0A;
   margin: 0 auto;
-  width: 1550px;
-  height: 65px;
+  width: 100%;
 }
 
 .navbardiv h4 {
@@ -84,11 +87,14 @@ input {
 
 .footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   background-color: #CD8C0A;
-  width: 1550px;
-  padding: 20px 40px;
-  flex-direction: column;
+  width: 100%;
+  padding: 20px 20px;
+  flex-direction: row;
+  height: 80px;
+  margin-top: auto;
+  align-items: center;
 }
 
 .footer img {
@@ -96,22 +102,37 @@ input {
 }
 
 .firstfooter {
-  display: block;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.secondfooter {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/*.footer b {
+.firstfooter b {
   display: flex;
   justify-content: space-around;
   color:#2D3648;
 }
 
-.footer a {
+.firstfooter a {
   color:#2D3648;
   display: flex;
-  justify-content: space-around;
-} */
+  justify-content: space-evenly;
+  text-Decoration: none;
+} 
+
+.secondfooter a {
+  color:#2D3648;
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+  text-Decoration: none;
+}
 
 /* HomePage */
 
@@ -123,30 +144,37 @@ input {
 
 .container {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  text-align: left;
+  margin: 10px;
+  width: 100%;
   padding: 10px;
 }
 
 .cardAdoption {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
 }
 
 .cardsContainer {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
 .cardsText {
   margin-left: 20px;
 }
 
 .cardAdoption img {
-  width: 400px;
-  height: 300px;
+  width: 350px;
+  height: 250px;
   float: left;
   border-radius: 20px;
 }
@@ -174,9 +202,9 @@ input {
   align-items: center;
 }
 #details-name {
-  font-size: 40px;
+  font-size: 25px;
   color: #2D3648;
-  margin: 10px;
+  margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,7 +215,7 @@ input {
   width: auto;
 }
 #animal-info {
-  font-size: 20px;
+  font-size: 15px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -195,6 +223,11 @@ input {
 #details-info {
   width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.details {
+  margin: 10px 30px;
 }
 .details-info {
   width: 100%;
@@ -204,8 +237,9 @@ input {
   justify-content: center;
 }
 #details-description {
-  font-size: 20px;
+  font-size: 18px;
   color: #2D3648;
+  margin: 10px 10px 40px 10px;
   display: flex;
   display: inline-block;
   width: 800px;
@@ -214,6 +248,14 @@ input {
 }
 #popup {
   color: #2D3648;
+}
+.popupInfo {
+  width: 200px;
+  height: auto;
+  color: #2D3648;
+}
+#adopt-button {
+  margin: 10px;
 }
 #share-buttons {
   display: flex;
@@ -229,6 +271,94 @@ input {
 #whatsapp-share {
   margin: 15px 5px;
 }
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  color: black;
+  font-size: 16px;
+}
+#edit-form {
+  display: flex;
+  margin-bottom: 10px;
+}
+.editLabel {
+  margin: 8px;
+  width: 100px;
+  display: flex;
+}
+.labelName {
+  font-size: 14px;
+  display: flex;
+}
 #details-back-button {
   margin: 30px;
 }
+.standardButton {
+  display: flex;
+  font-size: 14px;
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  background: #2E4057;
+  color: white;
+  transition-duration: 0.4s;
+  font-family: 'Acari Sans Neue', sans-serif;
+}
+.standardButton:hover {
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
+}
+
+.arrow img {
+  height: 100px;
+
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Picture img {
+  height: 340px;
+  justify-content: space-evenly;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  width: 100%;
+}
+
+.carousel-div {
+  display: flex;
+}
+
+.homepage {
+  margin-bottom: 0;
+}
+
+.picturediana img {
+  height: 200px;
+}
+
+.picturerui img {
+  height: auto;
+  width: 200px;
+}
+
+.card {
+  padding: 20px;
+  margin: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+

@@ -59,33 +59,33 @@ function EditPet (props) {
 
     return (
         <section>
-            <form onSubmit={handleSubmit}>
-                <label>
+            <form id="edit-form" onSubmit={handleSubmit}>
+                <label className="labelName">
                     Name
                 </label>
-                <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
-                <label>
+                <input className="editLabel" type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
+                <label className="labelName">
                     Species
                 </label>
-                <input type="text" name="species" value={species} onChange={(e) => setSpecies(e.target.value)} />
-                <label>
+                <input className="editLabel" type="text" name="species" value={species} onChange={(e) => setSpecies(e.target.value)} />
+                <label className="labelName">
                     Breed
                 </label>
-                <input type="text" name="breed" value={breed} onChange={(e) => setBreed(e.target.value)}/>
-                <label>
+                <input className="editLabel" type="text" name="breed" value={breed} onChange={(e) => setBreed(e.target.value)}/>
+                <label className="labelName">
                     Age
                 </label>
-                <input type="text" name="age" value={age} onChange={(e) => setAge(e.target.value)}/>
-                <label>
+                <input className="editLabel" type="text" name="age" value={age} onChange={(e) => setAge(e.target.value)}/>
+                <label className="labelName">
                     Description
                 </label>
-                <input type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)}/>
-                <label>
+                <input className="editLabel" type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)}/>
+                <label className="labelName">
                     Picture
                 </label>
-                <input type="text" name="picture" value={picture} onChange={(e) => setPicture(e.target.value)}/>
+                <input className="editLabel" type="text" name="picture" value={picture} onChange={(e) => setPicture(e.target.value)}/>
 
-                <button type="submit">Save Pet</button>
+                <button type="submit" className="standardButton">Save Pet</button>
             </form>
 
             {/*<button onClick={deletePet}>Delete</button>*/}

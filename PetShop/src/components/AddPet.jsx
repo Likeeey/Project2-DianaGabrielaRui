@@ -49,7 +49,7 @@ function AddPet (props) {
                      Picture Link
                 </label>
                 <input type="text" name="picture" value={picture} onChange={(e) => setPicture(e.target.value)}/>
-                <button className="button" type="submit">Add Pet</button>
+                <button className="standardButton" type="submit">Add Pet</button>
             </form>
         </section>
     )
