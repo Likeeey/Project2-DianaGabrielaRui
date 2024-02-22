@@ -6,6 +6,9 @@ import Adoption from "./Adoption";
 import EditPet from "../components/EditPet";
 import Popup from "reactjs-popup";
 import 'reactjs-popup/dist/index.css'
+import { FacebookShareButton, FacebookIcon } from 'react-share';
+import { TwitterShareButton, TwitterIcon } from 'react-share';
+import { WhatsappShareButton, WhatsappIcon } from 'react-share';
 
 const API_URL = "https://backend-server-awt7.onrender.com/pets";
 
@@ -18,7 +21,7 @@ function AdoptionDetails() {
     axios.get(`${API_URL}/${id}`)
     .then((response)=> setAdoption(response.data))
     .catch((error)=> console.log(error))
-    })
+    }, [])
     
     return (
         <section>
@@ -44,6 +47,29 @@ function AdoptionDetails() {
                 <div>For more information contact us via email:</div>
                 <p>adoptpets825@gmail.com</p>
                 </Popup>
+                </div>
+                <div>
+                    <FacebookShareButton
+                        url={`http://localhost:3000/pets/adoptiondetails/${id}`}
+                        quote={'He needs a new home!'}
+                        hashtag="#AdoptPets">
+                        <FacebookIcon size={32} round />
+                    </FacebookShareButton>
+                </div>
+                <div>
+                    <TwitterShareButton
+                        url={`http://localhost:3000/pets/adoptiondetails/${id}`}
+                        title={'He needs a new home!'}
+                        hashtags={["#AdoptPets"]}>
+                        <TwitterIcon size={32} round />
+                    </TwitterShareButton>
+                </div>
+                <div>
+                    <WhatsappShareButton
+                        url={`http://localhost:3000/pets/adoptiondetails/${id}`}
+                        title={'He needs a new home!'}>
+                        <WhatsappIcon size={32} round />
+                    </WhatsappShareButton>
                 </div>
         </section>
     )
