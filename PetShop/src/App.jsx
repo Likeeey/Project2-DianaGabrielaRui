@@ -6,7 +6,8 @@ import AdoptionDetails from "./Pages/AdoptionDetails"
 import Error from "./Pages/Error"
 import About from "./Pages/About"
 import Navbar from './components/NavBar'
-import Footer from './components/Footer'
+import Footer from './components/Footer' 
+
 import AddPet from "./components/AddPet"
 import EditPet from './components/EditPet'
 

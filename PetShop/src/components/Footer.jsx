@@ -2,10 +2,9 @@ import github from "../images/github.png"
 import linkedin from "../images/linkedin.png"
 function Footer() {
   return (
-    <footer>
-      <div className="firstLine">
+    <footer className="footer">
+      <div className="firstfooter">
         <img src={linkedin} />
-
         <a href="https://www.linkedin.com/in/gabrielavieira-da--silva/">
           <b>Gabriela Silva</b>
         </a>
@@ -16,10 +15,9 @@ function Footer() {
           <b>Rui Marques</b>
         </a>
       </div>
-      <div className="secondLine">
+      <div>
         <img src={github} alt="github icon" />
         <a href="https://github.com/Likeeey/Project2-DianaGabrielaRui/tree/master">
-          
           Repository - 2024
         </a>
       </div>

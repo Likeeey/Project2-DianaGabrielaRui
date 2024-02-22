@@ -1,15 +1,21 @@
-@font-face {
+
+
+/* @font-face {
   font-family: Cute Animal;
-  src: url(sansation_light.woff);
+  src: local('Cute Animal') url('https://fonts.cdnfonts.com/css/cute-animal');
+} */
+
+input {
+  height: 24px;
+  width: auto;
 }
 
-
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 100px;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  font-family: Acari Sans Neue, Cute Animal, 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
+  
 }
 
 .logo {
@@ -46,4 +52,110 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* NavBar */
+
+.navbar {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-family: 'CUTE ANIMAL', sans-serif;
+}
+
+.navbardiv {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #CD8C0A;
+  margin: 0 auto;
+  width: 1550px;
+  height: 65px;
+}
+
+.navbardiv h4 {
+  color: #2D3648;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #CD8C0A;
+  width: 1550px;
+  padding: 20px 40px;
+  flex-direction: column;
+}
+
+.footer img {
+  height: 25px;
+}
+
+.firstfooter {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+/*.footer b {
+  display: flex;
+  justify-content: space-around;
+  color:#2D3648;
+}
+
+.footer a {
+  color:#2D3648;
+  display: flex;
+  justify-content: space-around;
+} */
+
+/* HomePage */
+
+
+
+
+
+/* Adoption */
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px;
+}
+
+.cardAdoption {
+  display: flex;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.cardsText {
+  margin-left: 20px;
+}
+
+.cardAdoption img {
+  width: 400px;
+  height: 300px;
+  float: left;
+  border-radius: 20px;
+}
+
+/* Add Pet */
+
+.formAdd {
+  display: flex;
+}
+
+.labelAdd {
+  margin: 8px;
+}
+
+#labelPicture {
+  margin-right: 8px;
 }

@@ -37,11 +37,6 @@ function AdoptionDetails() {
                   <img src={adoption.picture}/>
               </div>
               <div>
-                <Link to={`/adoption`}>
-                    <button>Back</button>
-                </Link>
-              </div>
-              <div>
                 <Popup trigger={<button>Adopt</button>}
                     position="right center">
                 <div>For more information contact us via email:</div>
@@ -70,6 +65,11 @@ function AdoptionDetails() {
                         <WhatsappIcon size={32} round />
                     </WhatsappShareButton>
                 </div>
+                <div>
+                <Link to={`/adoption`}>
+                    <button>Back</button>
+                </Link>
+              </div>
         </section>
     )
 

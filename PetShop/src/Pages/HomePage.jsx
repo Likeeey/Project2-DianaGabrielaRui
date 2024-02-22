@@ -3,7 +3,7 @@ import Carousel from "../components/Carousel";
 function HomePage() {
 
   return (
-    <section>
+    <section className="homepage">
      
       <section className="container">
         <Carousel/>
