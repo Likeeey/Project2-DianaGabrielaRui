@@ -9,7 +9,7 @@ function About () {
     return (
         
         <section className="about">
-            <p>This website is to provide people a way to adopt or put to adoption their pets.</p>
+            <h4>This website is to provide people a way to adopt or put to adoption their pets.</h4>
             <div>
                 <p>Made By:</p>
             </div>

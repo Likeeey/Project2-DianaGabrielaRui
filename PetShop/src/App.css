@@ -39,9 +39,11 @@ input {
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -63,6 +65,7 @@ input {
 
 .card {
   padding: 2em;
+  background-color: antiquewhite;
 }
 
 .read-the-docs {
@@ -72,9 +75,9 @@ input {
 /* NavBar */
 
 .navbar {
-  padding-top: 14px;
   padding-bottom: 14px;
   font-family: 'CUTE ANIMAL', sans-serif;
+  font-size: 20px;
 }
 
 .navbardiv {
@@ -97,7 +100,6 @@ input {
   display: flex;
   justify-content: space-around;
   background-color: #CD8C0A;
-  width: 100%;
   padding: 20px 20px;
   flex-direction: row;
   height: 80px;
@@ -144,7 +146,9 @@ input {
 
 /* HomePage */
 
-
+#home-intro {
+  font-size: 23px;
+}
 
 
 
@@ -178,6 +182,7 @@ input {
 
 .cardsText {
   margin-left: 20px;
+  width: 250px;
 }
 
 .cardAdoption img {
@@ -191,10 +196,12 @@ input {
 
 .formAdd {
   display: flex;
+  font-size: 14px;
 }
 
 .labelAdd {
   margin: 8px;
+  display: flex;
 }
 
 #labelPicture {
@@ -209,76 +216,92 @@ input {
   justify-content: center;
   align-items: center;
 }
+
 #details-name {
-  font-size: 25px;
+  font-size: 23px;
   color: #2D3648;
   margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #details-picture {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 500px;
   width: auto;
 }
+
 #animal-info {
-  font-size: 15px;
+  font-size: 12px;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
+
 #details-info {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
 .details {
   margin: 10px 30px;
 }
+
 .details-info {
   width: 100%;
-  font-size: 17px;
+  font-size: 15px;
   color: #2D3648;
   display: flex;
   justify-content: center;
 }
+
 #details-description {
   font-size: 18px;
   color: #2D3648;
-  margin: 10px 10px 40px 10px;
+  margin: 10px;
   display: flex;
   display: inline-block;
-  width: 800px;
+  width: 750px;
   justify-content: center;
   align-items: center;
 }
+
 #popup {
   color: #2D3648;
 }
+
 .popupInfo {
   width: 200px;
   height: auto;
   color: #2D3648;
 }
+
 #adopt-button {
   margin: 10px;
+  font-size: 14px;
+  padding: 10px;
 }
+
 #share-buttons {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
 #facebook-share {
   margin: 15px 5px;
 }
+
 #twitter-share {
   margin: 15px 5px;
 }
+
 #whatsapp-share {
   margin: 15px 5px;
 }
+
 form {
   display: flex;
   flex-direction: row;
@@ -288,22 +311,35 @@ form {
   color: black;
   font-size: 16px;
 }
+
 #edit-form {
   display: flex;
   margin-bottom: 10px;
 }
+
 .editLabel {
   margin: 8px;
-  width: 100px;
+  width: 115px;
   display: flex;
 }
+
 .labelName {
   font-size: 14px;
   display: flex;
 }
+
 #details-back-button {
   margin: 30px;
 }
+
+#edit-save {
+  margin: 5px;
+}
+
+#edit-delete {
+  margin: 5px;
+}
+
 .standardButton {
   display: flex;
   font-size: 14px;
@@ -316,6 +352,7 @@ form {
   transition-duration: 0.4s;
   font-family: 'Acari Sans Neue', sans-serif;
 }
+
 .standardButton:hover {
   background-color: lightgray;
   color: black;
@@ -368,5 +405,4 @@ form {
   margin: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 

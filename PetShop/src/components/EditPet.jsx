@@ -40,21 +40,21 @@ function EditPet (props) {
         
         axios.put(`${API_URL}/${id}`, data)
         .then((response) => {
-            navigate(`/adoptiondetails/${id}`)
+            props.setAdoption(response.data);
         })
         .catch((error) => {
             console.log(error);
         })
 };
 
-    /*function deletePet () {
+    function deletePet () {
         axios.delete(`${API_URL}/${id}`)
         .then(() => {
         navigate("/adoption");
     })
         .catch((error) =>
         console.log(error)
-    )}*/
+    )}
 
 
     return (
@@ -85,10 +85,9 @@ function EditPet (props) {
                 </label>
                 <input className="editLabel" type="text" name="picture" value={picture} onChange={(e) => setPicture(e.target.value)}/>
 
-                <button type="submit" className="standardButton">Save Pet</button>
+                <button id="edit-save" type="submit" className="standardButton">Save Pet</button>
+                <button id="edit-delete" onClick={deletePet} className="standardButton">Delete</button>
             </form>
-
-            {/*<button onClick={deletePet}>Delete</button>*/}
         </section>
     )
 }

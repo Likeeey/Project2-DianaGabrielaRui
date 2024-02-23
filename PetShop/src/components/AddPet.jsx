@@ -7,6 +7,7 @@ function AddPet (props) {
     const [species, setSpecies] = useState("");
     const [breed, setBreed] = useState("");
     const [age, setAge] = useState(0);
+    const [description, setDescription] = useState("");
     const [picture, setPicture] = useState(null);
     
     
@@ -15,14 +16,14 @@ function AddPet (props) {
     
     function handleSubmit(e) {
         e.preventDefault();
-        const newPet = {name, species, breed, age, picture}
-        axios.post(API_URL, newPet)
-        .then((response)=> props.addPet(response.data))
-        .catch((error)=> console.log(error));
+        const newPet = {name, species, breed, age, description, picture}
+        // Call the calback newPets in Adoption component. This will save the new pet and update the list of adoptions
+        props.newPets(newPet);
         setName("");
         setSpecies("");
         setBreed("");
         setAge(0);
+        setDescription("");
         setPicture(null);
     }
     return (
@@ -44,7 +45,10 @@ function AddPet (props) {
                      Age
                 </label>
                 <input type="text" name="age" value={age} onChange={(e) => setAge(e.target.value)}/>
-                <br />
+                <label className="labelAdd">
+                    Description
+                </label>
+                <input type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)}/>
                 <label className="labelAdd" id="labelPicture">
                      Picture Link
                 </label>

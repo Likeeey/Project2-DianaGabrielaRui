@@ -15,42 +15,46 @@ function Adoption() {
       .then((response) => setAdoptions(response.data))
       .catch((error) => console.log(error));
   }, []);
+
+  /*
+  * Function to save the new pet and refresh the list (setAdoption) This function is passed as prop to Addpet component
+  */
   function newPets(newPet) {
-    const newAdoption = { ...newPet, newPet }; // Create a new object with the unique id generated automatically by json server
-    setAdoptions((pets) => [...pets, newAdoption]);
     axios
-      .post(`${API_URL}/`, newAdoption)
+      .post(`${API_URL}/`, newPet)
       .then((response) => {
-        setAdoptions(response.data);
+        setAdoptions((pets) => [...pets, response.data]);
       })
       .catch((error) => {
         console.log(error);
       });
-  }
+  };
+
   return (
     <div className="container">
       <div className="addPet">
         <h3>Add your pet</h3>
         <Addpet newPets={newPets} />
       </div>
+      <div className="cardsContainer">
       {adoptions &&
         adoptions.map((adoption) => {
           return (
-            <div className="cardsContainer" key={adoption.id}>
+            <div key={adoption.id}>
               <div className="cardAdoption" >
                 <img src={adoption.picture} />
                 <div className="cardsText">
-                  <Link to={`/adoptiondetails/${adoption.id}`}>
-                    <h4>Hi! My name is {adoption.name}</h4>
-                  </Link>
-                  <h4>I am a {adoption.species},</h4>
-                  <h4>my breed is {adoption.breed} and</h4>
-                  <h4>I am {adoption.age} years old</h4>
-                </div>
+                    <h3>Hi! My name is {adoption.name}</h3>
+                    <p>I am a {adoption.species}, my breed is {adoption.breed} and I am {adoption.age} years old.</p>
+                    <Link style={{ textDecoration: 'none' }} to={`/adoptiondetails/${adoption.id}`}>
+                      <button className="standardButton" id="adopt-button">Adopt</button>
+                    </Link>
+                  </div>
               </div>
             </div>
           );
         })}
+        </div>
     </div>
   );
 }

@@ -34,24 +34,24 @@ function AdoptionDetails() {
                 </div>
                     <div id="details-info">
                         <div className="details">
-                            <h4 className="details-info">Species: {adoption.species}</h4>
+                            <p className="details-info"><b>Species:</b>&nbsp;{adoption.species}</p>
                         </div>
                         <div className="details">
-                            <h4 className="details-info">Breed: {adoption.breed}</h4>
+                            <p className="details-info"><b>Breed:</b>&nbsp;{adoption.breed}</p>
                         </div>
                         <div className="details">
-                            <h4 className="details-info">Age: {adoption.age} years</h4>
+                            <p className="details-info"><b>Age:</b>&nbsp;{adoption.age} years</p>
                         </div>
                     </div>
                     <div>
-                        <h4 id="details-description">{adoption.description}</h4>
+                        <p id="details-description">{adoption.description}</p>
                     </div>
                     <div id="details-edit">
-                        <EditPet id={id}/>
+                        <EditPet id={id} setAdoption={setAdoption}/>
                     </div>
                 </div>
               <div>
-                <Popup id="popup" trigger={<button className="standardButton" id="adopt-button">Adopt</button>}
+                <Popup id="popup" trigger={<button className="standardButton" id="adopt-button">Adopt me</button>}
                     position="right center">
                 <div className="popupInfo">For more information contact us via email:</div>
                 <p className="popupInfo">adoptpets825@gmail.com</p>
@@ -81,11 +81,11 @@ function AdoptionDetails() {
                         </WhatsappShareButton>
                     </div>
                 </div>
-                <div id="details-back-button">
-                <Link to={`/adoption`} style={{ textDecoration: 'none' }}>
-                    <button className="standardButton">Back</button>
-                </Link>
-              </div>
+                {/*<div id="details-back-button">
+                    <Link to={`/adoption`} style={{ textDecoration: 'none' }}>
+                        <button className="standardButton">Back</button>
+                    </Link>
+                </div>*/}
         </section>
     )
 

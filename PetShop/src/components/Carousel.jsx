@@ -57,7 +57,7 @@ function Carousel() {
                 <p>{carouselData[card].breed}</p>
               </div>
               <div className="bigCardButtons">
-                <Link id="goAdoptionDetailsBtn" to={`/adoptionDetails/${carouselData[card].id} ` } state={carouselData[card]}>
+                <Link style={{ textDecoration: 'none' }} id="goAdoptionDetailsBtn" to={`/adoptionDetails/${carouselData[card].id} ` } state={carouselData[card]}>
                   <button className="standardButton">Go to {carouselData[card].name}</button>
                 </Link>
               </div>
@@ -75,7 +75,7 @@ function Carousel() {
                 <p>{carouselData[card  + 1].breed}</p>
               </div>
               <div className="bigCardButtons">
-                <Link id="goAdoptionDetailsBtn" to={`/adoptionDetails/${carouselData[card  + 1].id}` } state={carouselData[card]}>
+                <Link style={{ textDecoration: 'none' }} id="goAdoptionDetailsBtn" to={`/adoptionDetails/${carouselData[card  + 1].id}` } state={carouselData[card]}>
                   <button className="standardButton">Go to {carouselData[card + 1].name}</button>
                 </Link>
               </div>
